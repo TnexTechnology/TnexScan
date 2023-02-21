@@ -1,0 +1,16 @@
+PODS:
+  - TnexScan (0.1.0)
+
+DEPENDENCIES:
+  - TnexScan (from `../`)
+
+EXTERNAL SOURCES:
+  TnexScan:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TnexScan: 213f9ccd9fab2ac3f44641c95b70c781cfe66611
+
+PODFILE CHECKSUM: 537b9256a18f312b3614cc972587fef4c653b47e
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,6 @@
+framework module TnexScan {
+  umbrella header "TnexScan-umbrella.h"
+
+  export *
+  module * { export * }
+}
