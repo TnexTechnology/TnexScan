@@ -16,7 +16,9 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "TnexScan/Classes/**/*"
+  "source_files": "TnexScan/Classes/**/*",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }
