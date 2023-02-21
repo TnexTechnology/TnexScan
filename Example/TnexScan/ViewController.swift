@@ -90,8 +90,7 @@ extension ViewController: EditImageViewDelegate {
         ])
 
         let croppedImage = UIImage.from(ciImage: filteredImage)
-        print("#########")
-       self.cropped(image: croppedImage)
+        self.cropped(image: croppedImage)
     }
     
 }
