@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Objects that conform to the Transformable protocol are capable of being transformed with a `CGAffineTransform`.
-public protocol Transformable {
+ protocol Transformable {
 
     /// Applies the given `CGAffineTransform`.
     ///
@@ -28,7 +28,7 @@ extension Transformable {
     /// - Parameters:
     ///   - transforms: The transforms to apply.
     /// - Returns: The same object transformed by the passed in `CGAffineTransform`s.
-    public func applyTransforms(_ transforms: [CGAffineTransform]) -> Self {
+    func applyTransforms(_ transforms: [CGAffineTransform]) -> Self {
 
         var transformableObject = self
 

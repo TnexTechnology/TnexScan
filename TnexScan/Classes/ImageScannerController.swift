@@ -170,6 +170,7 @@ public final class ImageScannerController: UINavigationController {
             self.blackFlashView.isHidden = true
         }
     }
+    
 }
 
 /// Data structure containing information about a scan, including both the image and an optional PDF.

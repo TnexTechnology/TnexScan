@@ -47,7 +47,8 @@ extension ViewController: CameraScannerViewOutputDelegate {
 
     func captureImageSuccess(image: UIImage, withQuad quad: Quadrilateral?) {
         let frame1 = AVMakeRect(aspectRatio: image.size, insideRect: view.bounds)
-        self.cropImage(quad: quad!, quardSize: frame1.size, image: image)
+        guard let image = ImageScannerController.cropImage(quad: quad!, quardSize: frame1.size, image: image) else { return }
+        self.cropped(image: image)
     }
 }
 
@@ -65,32 +66,6 @@ extension ViewController: EditImageViewDelegate {
     }
     
     
-    public func cropImage(quad: Quadrilateral, quardSize: CGSize, image: UIImage) {
-        let imageSize = image.size
-        let scaleTransform = CGAffineTransform.scaleTransform(forSize: imageSize, aspectFillInSize: quardSize)
-        let transforms = [scaleTransform]
-        let transformedQuad = quad.applyTransforms(transforms)
-        guard let ciImage = CIImage(image: image) else {
-            return
-        }
-
-        let cgOrientation = CGImagePropertyOrientation(image.imageOrientation)
-        let orientedImage = ciImage.oriented(forExifOrientation: Int32(cgOrientation.rawValue))
-        let scaledQuad = transformedQuad.scale(quardSize, image.size)
-
-        // Cropped Image
-        var cartesianScaledQuad = scaledQuad.toCartesian(withHeight: image.size.height)
-        cartesianScaledQuad.reorganize()
-
-        let filteredImage = orientedImage.applyingFilter("CIPerspectiveCorrection", parameters: [
-            "inputTopLeft": CIVector(cgPoint: cartesianScaledQuad.bottomLeft),
-            "inputTopRight": CIVector(cgPoint: cartesianScaledQuad.bottomRight),
-            "inputBottomLeft": CIVector(cgPoint: cartesianScaledQuad.topLeft),
-            "inputBottomRight": CIVector(cgPoint: cartesianScaledQuad.topRight)
-        ])
-
-        let croppedImage = UIImage.from(ciImage: filteredImage)
-        self.cropped(image: croppedImage)
-    }
+    
     
 }

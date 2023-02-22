@@ -80,7 +80,7 @@ public struct Quadrilateral: Transformable {
     /// - Parameters:
     ///   - t: the transform to apply.
     /// - Returns: The transformed quadrilateral.
-    public func applying(_ transform: CGAffineTransform) -> Quadrilateral {
+    func applying(_ transform: CGAffineTransform) -> Quadrilateral {
         let quadrilateral = Quadrilateral(
             topLeft: topLeft.applying(transform),
             topRight: topRight.applying(transform),
@@ -124,7 +124,7 @@ public struct Quadrilateral: Transformable {
 
     /// Reorganizes the current quadrilateal, making sure that the points are at their appropriate positions.
     /// For example, it ensures that the top left point is actually the top and left point point of the quadrilateral.
-    public mutating func reorganize() {
+    mutating func reorganize() {
         let points = [topLeft, topRight, bottomRight, bottomLeft]
         let ySortedPoints = sortPointsByYValue(points)
 
@@ -155,7 +155,7 @@ public struct Quadrilateral: Transformable {
     ///   - toSize: The size to scale the quadrilateral to.
     ///   - rotationAngle: The optional rotation to apply.
     /// - Returns: The newly scaled and potentially rotated quadrilateral.
-    public func scale(_ fromSize: CGSize, _ toSize: CGSize, withRotationAngle rotationAngle: CGFloat = 0.0) -> Quadrilateral {
+    func scale(_ fromSize: CGSize, _ toSize: CGSize, withRotationAngle rotationAngle: CGFloat = 0.0) -> Quadrilateral {
         var invertedfromSize = fromSize
         let rotated = rotationAngle != 0.0
 
@@ -219,7 +219,7 @@ extension Quadrilateral {
     /// - Parameters:
     ///   - height: The height of the rect containing the quadrilateral.
     /// - Returns: The same quadrilateral in the cartesian corrdinate system.
-    public func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
+    func toCartesian(withHeight height: CGFloat) -> Quadrilateral {
         let topLeft = self.topLeft.cartesian(withHeight: height)
         let topRight = self.topRight.cartesian(withHeight: height)
         let bottomRight = self.bottomRight.cartesian(withHeight: height)
