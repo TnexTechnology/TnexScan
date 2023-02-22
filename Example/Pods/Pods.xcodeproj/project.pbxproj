@@ -35,7 +35,7 @@
 		8C07CDDC5AA1D110AE7EE6A83CBC8A64 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91C6AB9E87415A2D49D33B3750E7C93 /* UIImage+Utils.swift */; };
 		8D59081359C7F78354282FB1865BA2D3 /* TnexScan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3257D75B1637888ACB74714EE2098A /* TnexScan-dummy.m */; };
 		9039E7D05A406E8C2FE53C3FC591E866 /* CGRect+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27925E5FB2AE264FE7C052E9FC072C2 /* CGRect+Utils.swift */; };
-		96F02ECC29A680EA009E1B38 /* ImageScannerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F02ECB29A680EA009E1B38 /* ImageScannerExtension.swift */; };
+		96F02ECE29A6885C009E1B38 /* ImageScannerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F02ECD29A6885C009E1B38 /* ImageScannerExtension.swift */; };
 		98F17698A5AB93A42692EB36FAAEAC67 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED27833839387D8898EF1A067A56C0C9 /* Array+Utils.swift */; };
 		A6919E226ED9857C3CFD5C35198400E1 /* CGPoint+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCD86044CEE24522D3E60340356328 /* CGPoint+Utils.swift */; };
 		A96BE4E040D77B4FA61D05DDCD196084 /* Quadrilateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8683C887F414A242195CE9D972AAA0D /* Quadrilateral.swift */; };
@@ -103,7 +103,7 @@
 		8B07CF396FB318A6423295D0229F581A /* TnexScan-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TnexScan-Info.plist"; sourceTree = "<group>"; };
 		91E5BD1F971328D2CA5988C2354FA22D /* Pods-TnexScan_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TnexScan_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		926116B4D590658CC4B6989C2693DA76 /* Pods-TnexScan_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TnexScan_Example-frameworks.sh"; sourceTree = "<group>"; };
-		96F02ECB29A680EA009E1B38 /* ImageScannerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScannerExtension.swift; sourceTree = "<group>"; };
+		96F02ECD29A6885C009E1B38 /* ImageScannerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageScannerExtension.swift; path = TnexScan/Classes/ImageScannerExtension.swift; sourceTree = "<group>"; };
 		9970F7082DC962BEAFF5BAE9F47B876F /* Pods-TnexScan_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TnexScan_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9B7197069BE5FF365ABFE9C11B4A2C63 /* Pods-TnexScan_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TnexScan_Tests.modulemap"; sourceTree = "<group>"; };
 		9C9CCC288446B9C4617721851CB77E67 /* QuadrilateralView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QuadrilateralView.swift; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 		39C14B2A700EE6FF98F29DC36988C839 /* TnexScan */ = {
 			isa = PBXGroup;
 			children = (
+				96F02ECD29A6885C009E1B38 /* ImageScannerExtension.swift */,
 				FF988B69281C1A0A0235C545EDA20C44 /* ImageScannerController.swift */,
-				96F02ECB29A680EA009E1B38 /* ImageScannerExtension.swift */,
 				F997F0F3CFE3DD7D7F37ECE0DBF18241 /* Common */,
 				71C6F1D99B1E4965AD1D45BA890659F8 /* Edit */,
 				E810F8750C2996318581F5A57F31E3BC /* Extensions */,
@@ -541,7 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96F02ECC29A680EA009E1B38 /* ImageScannerExtension.swift in Sources */,
+				96F02ECE29A6885C009E1B38 /* ImageScannerExtension.swift in Sources */,
 				98F17698A5AB93A42692EB36FAAEAC67 /* Array+Utils.swift in Sources */,
 				6E586A8B8CA2BCA4CE62CC89DF64EA91 /* AVCaptureVideoOrientation+Utils.swift in Sources */,
 				DF29634030D9E8FD583C3D6BE1794FDC /* CameraScannerViewController.swift in Sources */,
